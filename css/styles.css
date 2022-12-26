@@ -618,6 +618,7 @@ body {
 .footer-box {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .footer .logo {
   margin-bottom: 28px;
