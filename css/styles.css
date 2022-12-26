@@ -29,6 +29,8 @@ html {
   --background-portfolio-overlay: rgba(33, 150, 243, 0.9);
   --footer-social-link: rgba(255, 255, 255, 0.1);
   --border-close: rgba(0, 0, 0, 0.1);
+  --border-form: rgba(33, 33, 33, 0.2);
+  --footer-input-border: rgba(255, 255, 255, 0.3);
 }
 
 h1,
@@ -663,6 +665,9 @@ body {
 .box1 {
   margin-right: 70px;
 }
+.box2 {
+  margin-right: 93px;
+}
 .footer-text {
   font-weight: 700;
   font-size: 14px;
@@ -701,7 +706,49 @@ body {
   width: 100%;
   height: 100%;
 }
+.box3 {
+  display: block;
+  gap: 12px;
+}
 
+.footer-field {
+  display: flex;
+}
+
+.footer-button {
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px auto;
+  justify-content: center;
+}
+
+.button-icon {
+  fill: var(--white-color);
+}
+
+.user-email {
+  padding: 15px;
+  border: 1px solid var(--footer-input-border);
+  border-radius: 4px;
+  color: var(--contact-color);
+  background-color: var(--secondary-bg-color);
+  margin-right: 12px;
+  outline: none;
+  height: 50px;
+  width: 358px;
+}
+.footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+}
+
+.button-icon {
+  margin-left: 10px;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -750,6 +797,76 @@ body {
   height: 18px;
 }
 
+.icon-close:hover,
+.icon-close:focus {
+  fill: var(--accent-color);
+}
+
 .primary:hover .backdrop {
   transform: scale(1);
+}
+
+/* form */
+
+.modal {
+  padding: 40px;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.form-field-label {
+  color: var(--secondary-text-color);
+  margin-bottom: 4px;
+}
+
+.form-field-input {
+  height: 40px;
+  width: 100%;
+  padding: 0 12px 0 48px;
+  border: 1px solid var(--border-form);
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-field-textarea {
+  height: 120px;
+  width: 100%;
+  padding: 16px 12px;
+  border: 1px solid var(--border-form);
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.form-field-textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.form-field-input:focus {
+  border-color: var(--accent-color);
+}
+
+.form-field-input:focus + .form-field-icon {
+  fill: var(--accent-color);
+}
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.form-field-checkbox {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-submit {
+  display: block;
+  margin: 0 auto;
 }
